@@ -238,6 +238,10 @@ nav{
 }
 
 @media only screen and (max-width: 767px) {
+
+    nav{
+        height: 10vh;
+    }
     .nav-mid{
         display: none;
     }
