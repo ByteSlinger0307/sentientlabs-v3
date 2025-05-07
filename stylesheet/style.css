@@ -436,6 +436,7 @@ nav{
     }
     .page-2-left{
         height: 10%;
+        padding-left: 4vw;
     }
     .page-2-left p{
         display: none;
@@ -443,7 +444,7 @@ nav{
     }
     .page-2-right{
         padding-top: 5vh;
-        padding-left: 8vw;
+        padding-left: 4vw;
         width: 100%;
     };
     .right-elem{
