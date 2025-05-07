@@ -133,38 +133,6 @@ function textSwapAnimation() {
     })
 }
 
-function sideMenu() {
-    var btnPress = document.getElementsByClassName("nav-right")[0]
-    var menuContainer = document.getElementsByClassName("nav-slider")[0]
-    var bars = document.querySelectorAll(".nav-bars")
-
-    var menuOpen = false
-
-    gsap.set(menuContainer, { x: "100%" })
-
-    btnPress.addEventListener("click", () => {
-        if (!menuOpen) {
-            gsap.to(menuContainer, { x: 0, duration: 0.8 });
-
-            gsap.to(bars[0], { rotate: 45, y: 3, duration: 0.3 });
-            gsap.to(bars[1], { rotate: -45, y: -3, duration: 0.3 });
-
-            gsap.to(btnPress, { x: 150 })
-
-        } else {
-            gsap.to(menuContainer, { x: "100%", duration: 0.4 })
-
-            gsap.to(bars[0], { rotate: 0, y: 0, duration: 0.3 })
-            gsap.to(bars[1], { rotate: 0, y: 0, duration: 0.3 })
-
-            gsap.to(btnPress, { x: 0 })
-
-        }
-        menuOpen = !menuOpen;
-    })
-
-}
-
 function sideMenuRes() {
     let menuOpen = false; // Declare outside to retain state
 
@@ -200,6 +168,33 @@ function sideMenuRes() {
 sideMenuRes();
 }
 
+function hoverAnimPage2 (){
+    var rightElems = document.querySelectorAll(".right-elem")
+
+    rightElems.forEach(function(elem){
+        elem.addEventListener("mouseenter", function(){
+            gsap.to(elem.childNodes[3],{
+                opacity:1,
+                scale:1
+            })
+        })
+
+        elem.addEventListener("mouseleave", function(){
+            gsap.to(elem.childNodes[3],{
+                opacity:0,
+                scale:0
+            })
+        })
+        elem.addEventListener("mousemove", function(dets){
+            gsap.to(elem.childNodes[3],{
+                x:dets.x-elem.getBoundingClientRect().x-10,
+                y:dets.y-elem.getBoundingClientRect().y-65,
+            })
+        })
+    })
+
+}
+
+hoverAnimPage2();
 sideMenuRes();
-// sideMenu();
 textSwapAnimation();
