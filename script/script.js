@@ -288,7 +288,7 @@ function implemAnim() {
                 scroller: "#main",
                 start: "top 80%",
                 end: "top 30%",
-                markers: true,
+                // markers: true,
                 // scrub: true
             }
         });
