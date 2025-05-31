@@ -459,7 +459,7 @@ nav{
 }
 
 .page-5{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -476,6 +476,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .upper-div h1{
     font-size: 4.3vw;
@@ -515,6 +516,7 @@ nav{
     justify-content: center;
 }
 .card-upper-outline-circle{
+    /* scale: 0.5; */
     margin-top: 3vh;
     display: flex;
     align-items: center;
@@ -550,6 +552,7 @@ nav{
 .card-para p{
     font-size: .8vw;
     text-align: center;
+    color: #999595;
 }
 .div-btn{
     margin-top: 3vh;
@@ -566,6 +569,7 @@ nav{
     justify-content: center;
     background-color: #6850eb;
     border-radius: 50px;
+    transition: all .2s ease-in;
 }
 .btn-wrapper a{
     text-decoration: none;
@@ -574,7 +578,14 @@ nav{
     font-weight: 600; 
 }
 
+.btn-wrapper:hover{
+    background-color: #7A63FF;
+}
 
+.page-6{
+    height: 100vh;
+    width: 100%;
+}
 
 
 
@@ -683,5 +694,35 @@ nav{
     }
     .page-3-body h2{
         font-size: 4.5vw;
+    }
+    .lower-div-wrapper{
+        flex-direction: column;
+    }
+    .middle-div{
+        margin-top: 2vh;
+        width: 80%;
+    }
+    .middle-div p{
+        font-size: 2.7vw;
+    }
+    .card-upper-outline-circle{
+        height: 70px;
+        width: 70px;
+    }
+    .card-upper-img-div{
+        height: 50px;
+        width: 50px;
+    }
+    .card-upper-img-div i{
+        font-size: 2vw;
+    }
+    .card-title h3{
+        font-size: 5vw;
+    }
+    .card-para{
+        width: 50vw;
+    }
+    .card-para p{
+        font-size: 3vw;
     }
   }
