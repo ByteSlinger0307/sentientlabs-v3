@@ -27,12 +27,6 @@ function locomotiveAnimation() {
                 height: window.innerHeight
             };
         }
-
-        // follwoing line is not required to work pinning on touch screen
-
-        /* pinType: document.querySelector(".smooth-scroll").style.transform
-          ? "transform"
-          : "fixed"*/
     });
 
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
@@ -195,6 +189,27 @@ function hoverAnimPage2 (){
 
 }
 
+function iconAnim (){
+    var outlineCir = document.querySelectorAll(".card-upper-outline-circle");
+    var imgDiv = document.querySelectorAll(".card-upper-img-div")
+
+    outlineCir.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+        gsap.to(el, {
+        backgroundColor: "#6850eb",
+        duration: 0.1
+        });
+    });
+    el.addEventListener("mouseleave", () => {
+        gsap.to(el, {
+        backgroundColor: "transparent",
+        duration: 0.1
+        });
+    });
+    });
+}
+
+iconAnim();
 hoverAnimPage2();
 sideMenuRes();
 textSwapAnimation();

@@ -461,7 +461,124 @@ nav{
 .page-5{
     height: 100vh;
     width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
+.page-5-wrapper{
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.upper-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.upper-div h1{
+    font-size: 4.3vw;
+    letter-spacing: 10px;
+}
+.middle-div{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-div p{
+    color: #a3a0a0;
+    font-size: 1.3vw;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.lower-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lower-div-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lower-div-cards{
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.card-upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-upper-outline-circle{
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .1vw solid #20155d;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.card-upper-img-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6850eb;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.card-upper-img-div i{
+    font-size: 1.5vw;
+}
+.card-title{
+    margin-top: 1vh;
+}
+.card-title h3{
+    font-size: 1.5vw;
+    font-weight: 800;
+}
+.card-para{
+    margin-top: 1vh;
+    width: 15vw;
+}
+.card-para p{
+    font-size: .8vw;
+    text-align: center;
+}
+.div-btn{
+    margin-top: 3vh;
+    /* background-color: red; */
+    height: 5vw;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6850eb;
+    border-radius: 50px;
+}
+.btn-wrapper a{
+    text-decoration: none;
+    padding: 2vh 3vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+
+}
+
+
+
+
+
 
 @media only screen and (max-width: 767px) {
 
