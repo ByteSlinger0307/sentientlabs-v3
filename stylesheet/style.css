@@ -671,6 +671,11 @@ nav{
     justify-content: space-around;
 }
 
+.page-7{
+    height: 100vh;
+    width: 100%;
+}
+
 
 
 
@@ -817,5 +822,29 @@ nav{
     .btn-wrapper a{
         padding: 2vh 10vw;
         font-size: 4vw;
+    }
+    .page-6{
+        min-height: 80vh;
+    }
+    .page-6-top{
+        width: 70%;
+    }
+    .top-heading h1{
+        font-size: 6vw;
+    }
+    .top-para p{
+        font-size: 2vw;
+    }
+    .main-img i{
+        font-size: 6vw;
+    }
+    .main-head-p6 p{
+        font-size: 2.5vw;
+    }
+    .main-para-p6{
+        width: 70%;
+    }
+    .main-para-p6 p{
+        font-size: 2.5vw;
     }
   }
