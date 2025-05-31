@@ -557,8 +557,8 @@ nav{
 .div-btn{
     margin-top: 3vh;
     /* background-color: red; */
-    height: 5vw;
-    width: 20vw;
+    /* height: 5vw;
+    width: 20vw; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -724,5 +724,9 @@ nav{
     }
     .card-para p{
         font-size: 3vw;
+    }
+    .btn-wrapper a{
+        padding: 2vh 10vw;
+        font-size: 4vw;
     }
   }
