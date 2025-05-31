@@ -672,9 +672,109 @@ nav{
 }
 
 .page-7{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
+.page-7-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.p7-top-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.p7-top-heading{
+    margin-top: 5vh;
+}
+.p7-top-heading h1{
+    font-size: 5vw;
+}
+.p7-top-para{
+    margin-top: 1vh;
+    width: 53%;
+}
+.p7-top-para p{
+    color: #8e8c8c;
+    font-size: 1.2vw;
+    text-align: center;
+}
+.p7-middle-wrapper{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.p7-middle-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.p7-middle-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22vh;
+    width: 22vh;
+    border-radius: 50%;
+    border: 2px solid #7A63FF;
+}
+
+.p7-middle-img img{
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.p7-middle-name{
+    margin-top: 2vh;
+}
+
+.p7-middle-name h3{
+    text-transform: uppercase;
+    font-size: 2vw;
+}
+
+.p7-middle-post{
+    margin-top: .5vh;
+}
+
+.p7-middle-post h5{
+    color: #7A63FF;
+}
+
+.p7-middle-para{
+    margin-top: 1vh;
+    width: 50%;
+}
+.p7-middle-para p{
+    text-align: center;
+    color: #9a9a9a;
+}
+.p7-middle-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 15vw;
+    border-radius: 50px;
+    margin-top: 5vh;
+    background-color: #7A63FF;
+}
+.p7-middle-btn a {
+    text-decoration: none;
+    font-size: 1.2vw;
+}
+
 
 
 
@@ -853,5 +953,27 @@ nav{
     }
     .main-para-p6 p{
         font-size: 2.5vw;
+    }
+    .p7-top-heading h1{
+        font-size: 7vw;
+    }
+    .p7-top-para p{
+        font-size: 2vw;
+    }
+    .p7-middle-wrapper{
+        flex-direction: column;
+    }
+    .p7-middle-cards{
+        margin-bottom: 4vh;
+    }
+    .p7-middle-btn{
+        height: 6vh;
+        width: 40vw;
+    }
+    .p7-middle-name h3{
+        font-size: 4vw;
+    }
+    .p7-middle-btn a{
+        font-size: 3vw;
     }
   }
