@@ -800,6 +800,9 @@ nav{
         height: 70px;
         width: 70px;
     }
+    .div-btn{
+        margin-bottom: 5vh;
+    }
     .card-upper-img-div{
         height: 50px;
         width: 50px;
@@ -823,6 +826,10 @@ nav{
         padding: 2vh 10vw;
         font-size: 4vw;
     }
+    .page-5-wrapper{
+        margin-top: 5vh;
+    }
+
     .page-6{
         min-height: 80vh;
     }
