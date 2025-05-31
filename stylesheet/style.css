@@ -598,17 +598,20 @@ nav{
 }
 
 .top-heading h1{
+    opacity: 0;
     font-size: 4.2vw;
     color: black;
     font-weight: 800;
 }
 
 .top-para p{
+    opacity: 0;
     font-size: 1.2vw;
     color: #3C3C3C;
 }
 
 .page-6-heading{
+    opacity: 0;
     padding-left: 7vw;
     margin-top: 3vh;
 }
@@ -625,6 +628,7 @@ nav{
     justify-content: space-around;
 }
 .page-6-main-content{
+    opacity: 0;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -655,6 +659,7 @@ nav{
 }
 
 .page-6-lower-heading{
+    opacity: 0;
     padding-left: 7vw;
     margin-top: 3vh;
 }
@@ -775,11 +780,9 @@ nav{
     font-size: 1.2vw;
 }
 
-
-
-
-
-
+.p7-middle-btn:hover{
+    background-color: #6850eb;
+}
 
 @media only screen and (max-width: 767px) {
 

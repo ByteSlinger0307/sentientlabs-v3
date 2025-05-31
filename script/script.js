@@ -36,7 +36,6 @@ function locomotiveAnimation() {
 }
 locomotiveAnimation();
 
-
 function textSwapAnimation() {
     var touchElem1 = document.getElementsByClassName("nav-mid-elem-1")[0]
     var touchElem2 = document.getElementsByClassName("nav-mid-elem-2")[0]
@@ -229,9 +228,9 @@ function implemAnim() {
                 trigger: ".upper-div",
                 scroller: "#main",
                 start: "top 50%",
-                end: "top 10%",
+                end: "top 30%",
                 // markers: true,
-                // scrub: true
+                scrub: true
             },
         });
 
@@ -241,39 +240,44 @@ function implemAnim() {
                 trigger: ".upper-div",
                 scroller: "#main",
                 start: "top 50%",
-                end: "top 10%",
+                end: "top 30%",
+                scrub: true
             },
         });
 
         gsap.from(outlineCirc, {
-            scale: 0,
+            scale: 0.5,
+            opacity:0,
             scrollTrigger: {
                 trigger: ".upper-div",
                 scroller: "#main",
                 start: "top 50%",
-                end: "top 10%",
+                end: "top 30%",
+                scrub: true
             },
         });
 
         gsap.from(title, {
             y: "10vh",
-            scale: 0,
+            scale: 0.5,
             scrollTrigger: {
                 trigger: ".upper-div",
                 scroller: "#main",
                 start: "top 50%",
-                end: "top 10%",
+                end: "top 30%",
+                scrub: true
             },
         });
 
         gsap.from(para, {
             y: "10vh",
-            scale: 0,
+            scale: 0.5,
             scrollTrigger: {
                 trigger: ".upper-div",
                 scroller: "#main",
                 start: "top 50%",
-                end: "top 10%",
+                end: "top 30%",
+                scrub: true
             },
         });
 
@@ -345,8 +349,135 @@ function implemAnim() {
     }
 }
 
+function page6FirstAnim (){
+    tl = gsap.timeline();
+    tl.to(".top-heading h1",{
+        opacity:1,
+        scrollTrigger: {
+            trigger:".page-6",
+            scroller:"#main",
+            start:"top 80%",
+            end: "top 40%",
+            // markers: true,
+            scrub:true
+        }
+    })
 
+    tl.to(".top-para p",{
+        opacity:1,
+        scrollTrigger: {
+            trigger:".page-6",
+            scroller:"#main",
+            start:"top 80%",
+            end: "top 40%",
+            // markers: true,
+            scrub:true
+        }
+    })
 
+    tl.to(".page-6-heading",{
+        opacity:1,
+        scrollTrigger: {
+            trigger:".page-6",
+            scroller:"#main",
+            start:"top 40%",
+            end: "top 30%",
+            // markers: true,
+            scrub:true
+        }
+    })
+
+    tl.to(".page-6-main-content",{
+        opacity:1,
+        scrollTrigger: {
+            trigger:".page-6",
+            scroller:"#main",
+            start:"top 40%",
+            end: "top 30%",
+            // markers: true,
+            scrub:true
+        }
+    })
+    tl.to(".page-6-lower-heading",{
+        opacity:1,
+        scrollTrigger: {
+            trigger:".page-6",
+            scroller:"#main",
+            start:"top 40%",
+            end: "top 30%",
+            // markers: true,
+            scrub:true
+        }
+    })
+
+}
+
+function page6SecondAnim (){
+    tl = gsap.timeline();
+
+    tl.from(".top-heading", {
+        y: -80,
+        scrollTrigger: {
+            trigger:".page-6-middle",
+            scroller:"#main",
+            start:"top 60%",
+            end: "top 20%",
+            // markers: true,
+            scrub:true
+        }
+
+    })
+    tl.from(".top-para", {
+        y: -80,
+        scrollTrigger: {
+            trigger:".page-6-middle",
+            scroller:"#main",
+            start:"top 60%",
+            end: "top 20%",
+            // markers: true,
+            scrub:true
+        }
+
+    })
+
+    tl.from(".page-6-heading", {
+        y: -70,
+        scrollTrigger: {
+            trigger:".page-6-middle",
+            scroller:"#main",
+            start:"top 60%",
+            end: "top 20%",
+            // markers: true,
+            scrub:true
+        }
+
+    })
+    tl.from(".page-6-main-content", {
+        y: -70,
+        scrollTrigger: {
+            trigger:".page-6-middle",
+            scroller:"#main",
+            start:"top 60%",
+            end: "top 20%",
+            // markers: true,
+            scrub:true
+        }
+
+    })
+    tl.from(".page-6-lower-heading", {
+        y: -70,
+        scrollTrigger: {
+            trigger:".page-6-middle",
+            scroller:"#main",
+            start:"top 60%",
+            end: "top 20%",
+            // markers: true,
+            scrub:true
+        }
+
+    })
+}
+    
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -355,4 +486,6 @@ document.addEventListener("DOMContentLoaded", () => {
     hoverAnimPage2();
     sideMenuRes();
     implemAnim();
+    page6FirstAnim();
+    page6SecondAnim();
 });
