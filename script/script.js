@@ -209,79 +209,150 @@ function iconAnim (){
     });
 }
 
-var outlineCirc = document.querySelectorAll(".card-upper-outline-circle")
-var heading = document.querySelectorAll(".upper-div h1")
-var middle = document.querySelectorAll(".middle-div p")
-var lower = document.querySelectorAll(".lower-div")
-var btn = document.querySelectorAll(".div-btn")
-var title = document.querySelectorAll(".card-title")
-var para = document.querySelectorAll(".card-para")
+function implemAnim() {
+    var outlineCirc = document.querySelectorAll(".card-upper-outline-circle");
+    var heading = document.querySelectorAll(".upper-div h1");
+    var middle = document.querySelectorAll(".middle-div p");
+    var lower = document.querySelectorAll(".lower-div");
+    var btn = document.querySelectorAll(".div-btn");
+    var title = document.querySelectorAll(".card-title");
+    var para = document.querySelectorAll(".card-para");
+
+    // Media query check for mobile/tablet devices
+    var isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    if (!isMobile) {
+        // Desktop animations
+        gsap.from(heading, {
+            y: "10vh",
+            scrollTrigger: {
+                trigger: ".upper-div",
+                scroller: "#main",
+                start: "top 50%",
+                end: "top 10%",
+                // markers: true,
+                // scrub: true
+            },
+        });
+
+        gsap.from(middle, {
+            y: "10vh",
+            scrollTrigger: {
+                trigger: ".upper-div",
+                scroller: "#main",
+                start: "top 50%",
+                end: "top 10%",
+            },
+        });
+
+        gsap.from(outlineCirc, {
+            scale: 0,
+            scrollTrigger: {
+                trigger: ".upper-div",
+                scroller: "#main",
+                start: "top 50%",
+                end: "top 10%",
+            },
+        });
+
+        gsap.from(title, {
+            y: "10vh",
+            scale: 0,
+            scrollTrigger: {
+                trigger: ".upper-div",
+                scroller: "#main",
+                start: "top 50%",
+                end: "top 10%",
+            },
+        });
+
+        gsap.from(para, {
+            y: "10vh",
+            scale: 0,
+            scrollTrigger: {
+                trigger: ".upper-div",
+                scroller: "#main",
+                start: "top 50%",
+                end: "top 10%",
+            },
+        });
+
+    } else {
+        // Mobile/Tablet animations
+        gsap.from(heading, {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".middle-div",
+                scroller: "#main",
+                start: "top 80%",
+                end: "top 30%",
+                markers: true,
+                // scrub: true
+            }
+        });
+
+        gsap.from(middle, {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".middle-div",
+                scroller: "#main",
+                start: "top 80%",
+                end: "top 30%",
+            }
+        });
+
+        gsap.from(outlineCirc, {
+            scale: 0.5,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".middle-div",
+                scroller: "#main",
+                start: "top 80%",
+                end: "top 30%",
+            }
+        });
+
+        gsap.from(title, {
+            y: 50,
+            scale: 0.8,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".middle-div",
+                scroller: "#main",
+                start: "top 80%",
+                end: "top 30%",
+            }
+        });
+
+        gsap.from(para, {
+            y: 50,
+            scale: 0.8,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".middle-div",
+                scroller: "#main",
+                start: "top 80%",
+                end: "top 30%",
+            }
+        });
+    }
+}
 
 
 
-gsap.from(heading, {
-    y:"10vh",
-    scrollTrigger: {
-    trigger: ".upper-div",
-    scroller:"#main",
-    start: "top 50%", 
-    end: "top 10%",             
-    // markers: true,  
-    // scrub:true      
-    },
-})
-
-gsap.from(middle, {
-    y:"10vh",
-    scrollTrigger: {
-    trigger: ".upper-div",
-    scroller:"#main",
-    start: "top 50%", 
-    end: "top 10%",             
-    // markers: true,  
-    // scrub:true      
-    },
-})
-
-gsap.from(outlineCirc, {
-    scale:0,
-    scrollTrigger: {
-    trigger: ".upper-div",
-    scroller:"#main",
-    start: "top 50%", 
-    end: "top 10%",             
-    // markers: true,  
-    // scrub:true      
-    },
-})
-gsap.from(title, {
-    y:"10vh",
-    scale:0,
-    scrollTrigger: {
-    trigger: ".upper-div",
-    scroller:"#main",
-    start: "top 50%", 
-    end: "top 10%",             
-    // markers: true,  
-    // scrub:true      
-    },
-})
-gsap.from(para, {
-    y:"10vh",
-    scale:0,
-    scrollTrigger: {
-    trigger: ".upper-div",
-    scroller:"#main",
-    start: "top 50%", 
-    end: "top 10%",             
-    // markers: true,  
-    // scrub:true      
-    },
-})
 
 
-
-iconAnim();
-hoverAnimPage2();
-sideMenuRes();
-textSwapAnimation();
+document.addEventListener("DOMContentLoaded", () => {
+    textSwapAnimation();
+    iconAnim();
+    hoverAnimPage2();
+    sideMenuRes();
+    implemAnim();
+});

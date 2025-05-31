@@ -28,9 +28,10 @@ body {
 }
 
 .wrapper-main{
-      position: relative;
-      display: flex;
-      justify-content: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 nav{
@@ -714,7 +715,7 @@ nav{
         width: 50px;
     }
     .card-upper-img-div i{
-        font-size: 2vw;
+        font-size: 5vw;
     }
     .card-title h3{
         font-size: 5vw;
@@ -724,6 +725,9 @@ nav{
     }
     .card-para p{
         font-size: 3vw;
+    }
+    .btn-wrapper{
+        margin-top: 2vh;
     }
     .btn-wrapper a{
         padding: 2vh 10vw;
