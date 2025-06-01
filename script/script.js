@@ -478,32 +478,34 @@ function page6SecondAnim (){
     })
 }
     
+function textSwapAnim2 () {
+    var wrapper = document.querySelector(".p8-bottom-btn-wrapper")
+    var upper = document.querySelector(".btn-bottom-p8-upper")
+    var bottom = document.querySelector(".btn-bottom-p8-bottom")
 
-var wrapper = document.querySelector(".p8-bottom-btn-wrapper")
-var upper = document.querySelector(".btn-bottom-p8-upper")
-var bottom = document.querySelector(".btn-bottom-p8-bottom")
+    wrapper.addEventListener("mouseenter", () => {
+        gsap.to(upper, {
+            transform:"translateY(-100%)",
+            duration:.2
+        })
+        gsap.to(bottom, {
+            transform:"translateY(-100%)",
+            duration:.2
+        })
+    })
 
-wrapper.addEventListener("mouseenter", () => {
-    gsap.to(upper, {
-        transform:"translateY(-100%)",
-        duration:.2
+    wrapper.addEventListener("mouseleave", () => {
+        gsap.to(upper, {
+            transform:"translateY(0%)",
+            duration:.2
+        })
+        gsap.to(bottom, {
+            transform:"translateY(0%)",
+            duration:.2
+        })
     })
-    gsap.to(bottom, {
-        transform:"translateY(-100%)",
-        duration:.2
-    })
-})
 
-wrapper.addEventListener("mouseleave", () => {
-    gsap.to(upper, {
-        transform:"translateY(0%)",
-        duration:.2
-    })
-    gsap.to(bottom, {
-        transform:"translateY(0%)",
-        duration:.2
-    })
-})
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -514,4 +516,5 @@ document.addEventListener("DOMContentLoaded", () => {
     implemAnim();
     page6FirstAnim();
     page6SecondAnim();
+    textSwapAnim2();
 });

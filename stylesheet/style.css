@@ -911,10 +911,38 @@ nav{
 }
 
 .page-9{
-    height: 80vh;
+    height: 75vh;
     width: 100%;
-    background-color: #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.p9-wrapper{
+    /* background-color: red; */
+    height: 90%;
+    width: 88%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.p9-top-wrapper{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.p9-top-logo img{
+    height: 12vh;
+    width: 12vh;
+}
+.p9-top-name h1{
+    padding-left: 1vw;
+    font-size: 6vw;
+}
+
+
 
 @media only screen and (max-width: 767px) {
 
