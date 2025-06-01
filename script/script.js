@@ -507,6 +507,37 @@ function textSwapAnim2 () {
 
 }
 
+function textSwapAnim3() {
+    var touchElements = document.querySelectorAll(".social-link-btn");
+    
+    touchElements.forEach(touch => {
+        var upper = touch.querySelector(".social-btn-upper");
+        var lower = touch.querySelector(".social-btn-lower");
+
+        touch.addEventListener("mouseenter", () => {
+            gsap.to(upper, {
+                y: "-100%",
+                duration: 0.2
+            });
+            gsap.to(lower, {
+                y: "-100%",
+                duration: 0.2
+            });
+        });
+
+        touch.addEventListener("mouseleave", () => {
+            gsap.to(upper, {
+                y: "0%",
+                duration: 0.2
+            });
+            gsap.to(lower, {
+                y: "0%",
+                duration: 0.2
+            });
+        });
+    });
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     textSwapAnimation();
@@ -517,4 +548,5 @@ document.addEventListener("DOMContentLoaded", () => {
     page6FirstAnim();
     page6SecondAnim();
     textSwapAnim2();
+    textSwapAnim3();
 });
